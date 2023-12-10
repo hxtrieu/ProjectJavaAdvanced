@@ -79,7 +79,7 @@ export class ProductComponent implements OnInit {
     this.productService.add(data).subscribe((response: any) => {
       this.dialogRef.close();
       this.onAddProduct.emit();
-      this.responseMessage = this.responseMessage;
+      this.responseMessage = response.message;
       this.snackbarService.openSnackBar(this.responseMessage, "success");
     }, (error) => {
       if (error.error?.message) {
@@ -103,7 +103,7 @@ export class ProductComponent implements OnInit {
     this.productService.update(data).subscribe((response: any) => {
       this.dialogRef.close();
       this.onEditProduct.emit();
-      this.responseMessage = this.responseMessage;
+      this.responseMessage = response.message;
       this.snackbarService.openSnackBar(this.responseMessage, "success");
     }, (error) => {
       if (error.error?.message) {
