@@ -28,6 +28,10 @@ const MENUITEMS = [
     {
         state: 'bill', name: "View Bill",
         type: 'link', icon: 'backup_table', role: ''
+    },
+    {
+        state: 'user', name: "Manage User",
+        type: 'link', icon: 'people', role: 'admin'
     }
 ]
 
